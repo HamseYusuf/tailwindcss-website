@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Save the Children</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* Ensure dropdown menus are hidden by default */
+    .dropdown-menu {
+      display: none;
+    }
+    /* Show dropdown menus on hover */
+    .menu-item:hover .dropdown-menu {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header class="bg-red-700 flex justify-between items-center py-4 px-8">
+    <div class="text-white font-bold text-xl">
+      <a href="#">Save the Children</a>
+    </div>
+    <nav class="relative">
+      <ul class="flex space-x-8 text-white">
+        <li class="relative menu-item">
+          <a href="#" class="block">WHAT WE DO</a>
+          <ul class="dropdown-menu absolute bg-white text-red-700 py-2 px-4 rounded-md shadow-md mt-2">
+            <li><a href="#" class="block py-1">Dropdown Link 1</a></li>
+            <li><a href="#" class="block py-1">Dropdown Link 2</a></li>
+            <!-- Add more dropdown links as needed -->
+          </ul>
+        </li>
+        <li class="relative menu-item">
+          <a href="#" class="block">WHERE WE WORK</a>
+          <ul class="dropdown-menu absolute bg-white text-red-700 py-2 px-4 rounded-md shadow-md mt-2">
+            <li><a href="#" class="block py-1">Dropdown Link 1</a></li>
+            <li><a href="#" class="block py-1">Dropdown Link 2</a></li>
+            <!-- Add more dropdown links as needed -->
+          </ul>
+        </li>
+        <li class="relative menu-item">
+          <a href="#" class="block">NEWS & STORIES</a>
+          <ul class="dropdown-menu absolute bg-white text-red-700 py-2 px-4 rounded-md shadow-md mt-2">
+            <li><a href="#" class="block py-1">Dropdown Link 1</a></li>
+            <li><a href="#" class="block py-1">Dropdown Link 2</a></li>
+            <!-- Add more dropdown links as needed -->
+          </ul>
+        </li>
+        <li class="relative menu-item">
+          <a href="#" class="block">RESEARCH & REPORTS</a>
+          <ul class="dropdown-menu absolute bg-white text-red-700 py-2 px-4 rounded-md shadow-md mt-2">
+            <li><a href="#" class="block py-1">Dropdown Link 1</a></li>
+            <li><a href="#" class="block py-1">Dropdown Link 2</a></li>
+            <!-- Add more dropdown links as needed -->
+          </ul>
+        </li>
+        <li class="relative menu-item">
+          <a href="#" class="block">ABOUT US</a>
+          <ul class="dropdown-menu absolute bg-white text-red-700 py-2 px-4 rounded-md shadow-md mt-2">
+            <li><a href="#" class="block py-1">Dropdown Link 1</a></li>
+            <li><a href="#" class="block py-1">Dropdown Link 2</a></li>
+            <!-- Add more dropdown links as needed -->
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div>
+      <a href="#" class="bg-white text-red-700 py-2 px-4 rounded-md font-semibold">DONATE</a>
+    </div>
+  </header>
+</body>
+</html>

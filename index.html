@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Schore </title>
+    <style>
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 767px) {
+            .dropdown-menu {
+                position: static;
+                box-shadow: none;
+            }
+            
+            .dropdown:hover .dropdown-menu {
+                display: none;
+            }
+            
+            .dropdown.open .dropdown-menu {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4">
+          <!-- Desktop Layout -->
+          <div class="hidden md:flex items-center justify-between">
+            <!-- Logo -->
+            <img src="chore.jpeg" alt="" class="h-12">
+      
+            <!-- Navigation -->
+            <nav>
+              <ul class="flex space-x-4 md:space-x-6">
+                <li class="dropdown relative">
+                  <a href="#" class="text-sm font-semibold uppercase text-gray-600 hover:text-gray-800 dropdown-toggle">What We Do</a>
+                  <div class="dropdown-menu absolute hidden pt-2">
+                    <div class="bg-white shadow-md rounded py-2">
+                      <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Option 1</a>
+                      <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Option 2</a>
+                      <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Option 3</a>
+                    </div>
+                  </div>
+                </li>
+                <!-- Rest of the navigation items -->
+                <li class="dropdown relative">
+                  <a href="#" class="text-sm font-semibold uppercase text-gray-600 hover:text-gray-800 dropdown-toggle">Who We Are</a>
+                  <div class="dropdown-menu absolute hidden pt-2">
+                    <div class="bg-white shadow-md rounded py-2">
+                      <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Option 1</a>
+                      <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Option 2</a>
+                      <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Option 3</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+      
+            <!-- Search and Language -->
+            <div class="flex items-center space-x-4">
+              <form class="relative hidden lg:block">
+                <!-- Search form -->
+              </form>
+            </div>
+          </div>
+          <!-- Mobile Layout -->
+          <!-- ... -->
+        </div>
+      </header>
+      
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+          const mobileMenu = document.getElementById('mobile-menu');
+          const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+      
+          // Toggle mobile menu
+          mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+          });
+      
+          // Toggle dropdown menus
+          dropdownToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+              const dropdown = toggle.parentNode;
+              const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+              dropdownMenu.classList.toggle('hidden');
+            });
+          });
+      
+          // Image slider code...
+        });
+      </script>
+
+<!-- Rest of the code -->
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const dropdowns = document.querySelectorAll('.dropdown');
+
+      // Toggle mobile menu
+      mobileMenuBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+      });
+
+      // Toggle dropdown menus on mobile
+      dropdowns.forEach(dropdown => {
+          dropdown.addEventListener('click', () => {
+              dropdown.classList.toggle('open');
+          });
+      });
+
+      // Image slider code...
+  });
+
+
+</script>
+
+<style>
+    .slide-container {
+      @apply relative w-full h-full;
+    }
+    .slide-image {
+      @apply absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out;
+    }
+  </style>
+<section class="relative h-screen overflow-hidden">
+    <!-- Image Slider -->
+    <div class="absolute inset-0 z-0">
+      <div class="slide-container">
+        <img src="image1.jpeg" alt="Slide 1" class="slide-image">
+        <img src="image2.jpeg" alt="Slide 2" class="slide-image hidden">
+        <img src="image3.jpeg" alt="Slide 3" class="slide-image hidden">
+        <img src="image4.jpeg" alt="Slide 4" class="slide-image hidden">
+      </div>
+    </div>
+  
+    <!-- Overlay and Content -->
+    <div class="absolute inset-0 bg-black bg-opacity-50 z-10 flex items-center justify-center text-white text-center px-4">
+      <div>
+        <h1 class="text-6xl md:text-8xl font-bold mb-4 tracking-tight">IMPACT</h1>
+        <p class="text-xl md:text-2xl font-semibold uppercase mb-8 tracking-wide">
+          See what the power of sport for development programs can do
+        </p>
+        <a href="#" class="bg-white text-black px-6 py-3 rounded-full font-bold text-lg hover:bg-gray-200 transition duration-300">
+          Learn More
+        </a>
+      </div>
+    </div>
+  
+    <!-- Slider Indicators -->
+    <div class="absolute bottom-4 left-0 right-0 flex justify-center space-x-2 z-20">
+      <button class="w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition duration-300 slider-dot active"></button>
+      <button class="w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition duration-300 slider-dot"></button>
+      <button class="w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition duration-300 slider-dot"></button>
+      <button class="w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition duration-300 slider-dot"></button>
+    </div>
+
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+  const slides = document.querySelectorAll('.slide-image');
+  const dots = document.querySelectorAll('.slider-dot');
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('hidden', i !== index);
+    });
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === index);
+      dot.classList.toggle('bg-opacity-100', i === index);
+    });
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      currentSlide = index;
+      showSlide(currentSlide);
+    });
+  });
+
+  setInterval(nextSlide, 5000); // Change slide every 5 seconds
+});
+  </script>
+</body>
+</html>
